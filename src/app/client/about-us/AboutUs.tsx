@@ -2,24 +2,20 @@ export interface AboutUs {
   (): JSX.Element;
 }
 
-export default function AboutUsBase() {
+function AboutUsBase() {
   return (
-    <>
-      {" "}
-      <div className="text-6xl absolute font-normal text-zinc-800 p-8 left-0">
-        About
+    <div className="relative w-full h-full flex flex-col justify-center items-center gap-y-16">
+      <div className="text-5xl text-center font-normal text-zinc-200 leading-relaxed pt-32">
+        About Us
       </div>
-      <p className="text-gray-800">
-        We are a group of people who are passionate about teaching manners and
-        etiquette. We believe that manners are important in today&apos;s society
-        and that they can make a big difference in how people interact with each
-        other. Our goal is to help people learn the skills they need to be
-        polite, respectful, and considerate in all situations.
+      <p className="text-lg text-zinc-100 font-light text-center max-w-[60%] leading-relaxed">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit
+        amet accumsan risus. Mauris tincidunt, sapien ac viverra scelerisque.
       </p>
-    </>
+    </div>
   );
 }
 
-export async function AboutUs() {
+export default function AboutUs() {
   return <AboutUsBase />;
 }

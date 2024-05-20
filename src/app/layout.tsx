@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Bitter, Inter, Libre_Baskerville, Lora } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const lora = Lora({ subsets: ["latin"] });
+const bitter = Bitter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Modern Manners of Tulsa",
-  description: "Modern etiquette for modern times.",
+  description: "Modern etiquette ",
 };
 
 export default function RootLayout({
@@ -16,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={bitter.className}>{children}</body>
     </html>
   );
 }
